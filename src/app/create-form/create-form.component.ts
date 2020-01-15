@@ -19,7 +19,9 @@ export class CreateFormComponent implements OnInit {
 
   initForm() {
     this.createForm = this.fb.group({
-      floorsCount: [null]
+      floorsCount: [null],
+      mineWidth: [null],
+      liftWidth: [null]
     });
   }
 
@@ -30,8 +32,18 @@ export class CreateFormComponent implements OnInit {
         .forEach(controlName => controls[controlName].markAsTouched());
       return;
     }
-    const { floorsCount: { value: floorsCount } } = controls
-    if (Number.isInteger(floorsCount)) this.setParameters({ floorsCount: Math.round(floorsCount) })
+    const {
+      floorsCount: {
+        value: floorsCount
+      },
+      mineWidth: {
+        value: mineWidth
+      },
+      liftWidth: {
+        value: liftWidth
+      }
+    } = controls
+    if (Number.isInteger(floorsCount)) this.setParameters({ floorsCount: Math.round(floorsCount), mineWidth, liftWidth })
   }
 
 }
