@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MineComponent } from './mine/mine.component';
@@ -16,7 +17,7 @@ import { CreateFormComponent } from './create-form/create-form.component';
     CreateFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

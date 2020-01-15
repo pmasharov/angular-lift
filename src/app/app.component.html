@@ -1,4 +1,4 @@
 <div class="container">
-  <app-create-form></app-create-form>
-  <app-mine [floors]='floors' [liftHeight]="liftHeight"></app-mine>
+  <app-create-form [setParameters]="setParameters"></app-create-form>
+  <app-mine *ngIf="floors.length" [floors]='floors' [liftHeight]="liftHeight"></app-mine>
 </div>
