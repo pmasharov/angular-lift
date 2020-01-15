@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LiftComponent implements OnInit {
 
-  @Input() liftHeight: string = ''
+  @Input() liftParams: Object = {}
 
   constructor() { }
 

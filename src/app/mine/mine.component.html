@@ -1,10 +1,10 @@
-<div class="app-mine">
+<div class="app-mine" [ngStyle]="{'width': mineParams.mineWidth}">
     <div *ngFor="let floor of floors; let i = index" [ngStyle]="{'height': floor.height}" class="floor">
         <div class="floor-label">
             {{floor.label}}
         </div>
     </div>
     <div class="app-floors">
-        <app-lift [liftHeight]="liftHeight"></app-lift>
+        <app-lift [liftParams]="liftParams"></app-lift>
     </div>
 </div>

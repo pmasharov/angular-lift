@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Floors } from '../app.component'
+import { Floor } from '../app.component'
 @Component({
   selector: 'app-mine',
   templateUrl: './mine.component.html',
@@ -7,8 +7,9 @@ import { Floors } from '../app.component'
 })
 export class MineComponent implements OnInit {
 
-  @Input() floors: Floors[] = []
-  @Input() liftHeight: string = ''
+  @Input() floors: Floor[] = []
+  @Input() liftParams: Object = {}
+  @Input() mineParams: Object = {}
 
   constructor() { }
 
