@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { LiftWayService } from "../_services/lift/lift-way.service"
 
 @Component({
   selector: 'app-floor',
@@ -6,12 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./floor.component.sass']
 })
 export class FloorComponent {
-  @Input() curFloor: Object = {}
+  @Input() curFloor: any = {}
 
-  constructor() { }
+  constructor(private liftWayService: LiftWayService) { }
 
-  addWayPoint(point: number) {
+  addWayPoint() {
+    const point = this.curFloor.id
     console.log(this.curFloor);
+    this.liftWayService.addWayPoint(point)
   }
 
 }

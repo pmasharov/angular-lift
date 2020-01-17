@@ -10,7 +10,7 @@ export class LiftWayService {
   private subject = new Subject<any>()
 
   addWayPoint(point: number) {
-    this.subject.next({ point })
+    this.subject.next(point)
   }
 
   clearWayPoints() {

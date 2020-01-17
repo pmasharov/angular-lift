@@ -21,7 +21,10 @@ export class LiftComponent implements OnInit, OnDestroy {
 
   constructor(private liftWayService: LiftWayService) {
     this.subscription = this.liftWayService.getWayPoints().subscribe(point => {
-      this.liftPosition = point ? `${this.liftParams.liftHeight}%` : `0%`
+      console.log(point);
+      console.log(this.liftParams.liftHeight);
+      this.liftPosition = point ? `${this.liftParams.liftHeight * point}%` : `0%`
+      console.log(this.liftPosition);
     })
   }
 
