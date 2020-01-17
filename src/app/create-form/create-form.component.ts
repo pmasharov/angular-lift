@@ -19,9 +19,9 @@ export class CreateFormComponent implements OnInit {
 
   initForm() {
     this.createForm = this.fb.group({
-      floorsCount: [null],
-      mineWidth: [null],
-      liftWidth: [null]
+      floorsCount: [5],
+      mineWidth: [50],
+      liftWidth: [50]
     });
   }
 

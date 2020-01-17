@@ -7,7 +7,7 @@ export interface Floor {
   height: string
 }
 export interface Lift {
-  liftHeight: string
+  liftHeight: number
   liftWidth: string
   liftLeftPos: string
   liftRightPos: string
@@ -27,6 +27,7 @@ export class AppComponent {
   floorsCount: number = null
 
   public floors: Floor[] = []
+
   public liftParams: Lift = {
     liftHeight: null,
     liftWidth: null,
@@ -57,7 +58,7 @@ export class AppComponent {
       mineWidth: `${mineWidth}%`,
     }
     this.liftParams = {
-      liftHeight: `${100 / floorsCount}%`,
+      liftHeight: 100 / floorsCount,
       liftWidth: `${liftWidth}%`,
       liftLeftPos: `${((100 - liftWidth) / 2)}%`,
       liftRightPos: `${((100 - liftWidth) / 2)}%`

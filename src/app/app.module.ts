@@ -7,6 +7,7 @@ import { MineComponent } from './mine/mine.component';
 import { LiftComponent } from './lift/lift.component';
 import { LiftDoorsComponent } from './lift-doors/lift-doors.component';
 import { CreateFormComponent } from './create-form/create-form.component';
+import { FloorComponent } from './floor/floor.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CreateFormComponent } from './create-form/create-form.component';
     MineComponent,
     LiftComponent,
     LiftDoorsComponent,
-    CreateFormComponent
+    CreateFormComponent,
+    FloorComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule
